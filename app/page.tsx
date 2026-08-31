@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ConfigPanel } from "@/components/ConfigPanel";
+import { HowToUse } from "@/components/HowToUse";
 import { MetricsRow } from "@/components/MetricsRow";
 import { MigrationPlan } from "@/components/MigrationPlan";
 import { TrajectoryColumn } from "@/components/TrajectoryColumn";
@@ -100,6 +101,8 @@ export default function Home() {
             Trajectory comparison
           </h1>
         </div>
+
+        <HowToUse />
 
         {result && (
           <>

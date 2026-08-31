@@ -16,12 +16,12 @@ const CATEGORY_LABELS: Record<MigrationPlanData["category"], string> = {
 // is a short plan to read, not a pass/fail signal to glance at.
 export function MigrationPlan({ plan }: MigrationPlanProps) {
   return (
-    <div className="rounded-lg border-l-2 border-brand-accent border-y border-r border-zinc-200 bg-white p-4 dark:border-y-zinc-800 dark:border-r-zinc-800 dark:bg-zinc-900">
-      <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="rounded-lg border-l-2 border-brand-accent border-y border-r border-zinc-200 bg-white p-4">
+      <h2 className="text-sm font-semibold text-zinc-900">
         Migration plan — {CATEGORY_LABELS[plan.category]}
       </h2>
-      <p className="mt-2 text-sm text-zinc-700 dark:text-zinc-300">{plan.recommendation}</p>
-      <p className="mt-2 text-xs italic text-zinc-400 dark:text-zinc-600">
+      <p className="mt-2 text-sm text-zinc-700">{plan.recommendation}</p>
+      <p className="mt-2 text-xs italic text-zinc-400">
         Inferred from this run&apos;s trajectories — a heuristic reading, not a measured outcome.
       </p>
     </div>

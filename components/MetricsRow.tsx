@@ -37,8 +37,8 @@ function ratio(candidate: number, baseline: number): string {
   return `${(candidate / baseline).toFixed(2)}×`;
 }
 
-const th = "px-3 py-2 text-left font-semibold text-zinc-500 dark:text-zinc-400";
-const td = "px-3 py-2 text-zinc-900 dark:text-zinc-100";
+const th = "px-3 py-2 text-left font-semibold text-zinc-500";
+const td = "px-3 py-2 text-zinc-900";
 
 export function MetricsRow({ baseline, candidate }: MetricsRowProps) {
   if (!baseline && !candidate) return null;
@@ -85,9 +85,9 @@ export function MetricsRow({ baseline, candidate }: MetricsRowProps) {
   ];
 
   return (
-    <div className="overflow-x-auto rounded-lg border border-zinc-200 dark:border-zinc-800">
+    <div className="overflow-x-auto rounded-lg border border-zinc-200">
       <table className="w-full min-w-[420px] border-collapse text-sm">
-        <thead className="border-b border-zinc-200 dark:border-zinc-800">
+        <thead className="border-b border-zinc-200">
           <tr>
             <th className={th}>Metric</th>
             <th className={th}>Baseline</th>
@@ -99,7 +99,7 @@ export function MetricsRow({ baseline, candidate }: MetricsRowProps) {
           {rows.map((r) => (
             <tr
               key={r.label}
-              className="border-b border-zinc-100 last:border-0 dark:border-zinc-900"
+              className="border-b border-zinc-100 last:border-0"
             >
               <td className={`${td} font-medium`}>{r.label}</td>
               <td className={`${td} font-mono`}>{r.baseline}</td>

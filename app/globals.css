@@ -20,12 +20,9 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Fireworks' own site is light — white background, dark text, purple
+   accents — with no dark theme, so this page stays light-only too rather
+   than following the visitor's OS preference. */
 
 body {
   background: var(--background);

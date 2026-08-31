@@ -10,10 +10,10 @@ interface VarianceSummaryProps {
 }
 
 const VERDICT_STYLES: Record<MigrationAssessment["verdict"], string> = {
-  migratable: "bg-green-100 text-green-800 dark:bg-green-950 dark:text-green-300",
-  reliability_risk: "bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300",
+  migratable: "bg-green-100 text-green-800",
+  reliability_risk: "bg-red-100 text-red-800",
   behavioral_difference:
-    "bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300",
+    "bg-amber-100 text-amber-800",
 };
 
 const VERDICT_LABELS: Record<MigrationAssessment["verdict"], string> = {
@@ -29,14 +29,14 @@ function formatCost(usd: number | null): string {
 function VarianceStats({ label, v }: { label: string; v: RunVariance }) {
   return (
     <div>
-      <p className="text-xs font-semibold text-zinc-700 dark:text-zinc-300">
+      <p className="text-xs font-semibold text-zinc-700">
         {label}
       </p>
-      <ul className="mt-1 space-y-0.5 text-xs text-zinc-600 dark:text-zinc-400">
+      <ul className="mt-1 space-y-0.5 text-xs text-zinc-600">
         <li>
           Steps per run: {v.stepCounts.join(", ")}
           {v.stepCountVaried && (
-            <span className="text-amber-600 dark:text-amber-400"> (varied)</span>
+            <span className="text-amber-600"> (varied)</span>
           )}
         </li>
         <li>Reached terminal tool: {(v.terminalToolRate * 100).toFixed(0)}% of runs</li>
@@ -58,9 +58,9 @@ export function VarianceSummary({
   assessment,
 }: VarianceSummaryProps) {
   return (
-    <div className="rounded-lg border-t-2 border-brand border-x border-b border-zinc-200 bg-white p-4 dark:border-x-zinc-800 dark:border-b-zinc-800 dark:bg-zinc-900">
+    <div className="rounded-lg border-t-2 border-brand border-x border-b border-zinc-200 bg-white p-4">
       <div className="flex items-center justify-between gap-3">
-        <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+        <h2 className="text-sm font-semibold text-zinc-900">
           Variance across {baseline.runs} run{baseline.runs > 1 ? "s" : ""}
         </h2>
         <span
@@ -70,7 +70,7 @@ export function VarianceSummary({
         </span>
       </div>
 
-      <ul className="mt-2 space-y-1 text-xs text-zinc-600 dark:text-zinc-400">
+      <ul className="mt-2 space-y-1 text-xs text-zinc-600">
         {assessment.reasons.map((r, i) => (
           <li key={i}>• {r}</li>
         ))}

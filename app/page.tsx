@@ -96,7 +96,7 @@ export default function Home() {
           <p className="font-mono text-xs font-semibold tracking-widest text-brand uppercase">
             Agent trajectory diff
           </p>
-          <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+          <h1 className="text-xl font-bold text-zinc-900">
             Trajectory comparison
           </h1>
         </div>

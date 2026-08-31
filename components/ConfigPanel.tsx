@@ -22,9 +22,9 @@ interface ConfigPanelProps {
 }
 
 const fieldLabel =
-  "block text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-1";
+  "block text-xs font-semibold uppercase tracking-wide text-zinc-500 mb-1";
 const fieldInput =
-  "w-full rounded-md border border-zinc-300 bg-white p-2 text-sm text-zinc-900 focus:border-brand focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
+  "w-full rounded-md border border-zinc-300 bg-white p-2 text-sm text-zinc-900 focus:border-brand focus:outline-none";
 
 export function ConfigPanel({
   task,
@@ -42,8 +42,8 @@ export function ConfigPanel({
   error,
 }: ConfigPanelProps) {
   return (
-    <aside className="flex h-full flex-col gap-4 overflow-y-auto border-r border-zinc-200 bg-zinc-50 p-4 dark:border-zinc-800 dark:bg-zinc-950">
-      <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <aside className="flex h-full flex-col gap-4 overflow-y-auto border-r border-zinc-200 bg-zinc-50 p-4">
+      <h2 className="text-sm font-semibold text-zinc-900">
         Config
       </h2>
 
@@ -151,7 +151,7 @@ export function ConfigPanel({
       </div>
 
       {error && (
-        <p className="rounded-md border border-red-300 bg-red-50 p-2 text-xs text-red-700 dark:border-red-800 dark:bg-red-950 dark:text-red-300">
+        <p className="rounded-md border border-red-300 bg-red-50 p-2 text-xs text-red-700">
           {error}
         </p>
       )}

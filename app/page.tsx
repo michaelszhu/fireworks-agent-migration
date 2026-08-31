@@ -92,9 +92,14 @@ export default function Home() {
       />
 
       <main className="flex flex-col gap-4 p-4">
-        <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          Trajectory comparison
-        </h1>
+        <div>
+          <p className="font-mono text-xs font-semibold tracking-widest text-brand uppercase">
+            Agent trajectory diff
+          </p>
+          <h1 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+            Trajectory comparison
+          </h1>
+        </div>
 
         {result && (
           <>

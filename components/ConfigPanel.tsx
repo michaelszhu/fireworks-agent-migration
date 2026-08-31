@@ -24,7 +24,7 @@ interface ConfigPanelProps {
 const fieldLabel =
   "block text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400 mb-1";
 const fieldInput =
-  "w-full rounded-md border border-zinc-300 bg-white p-2 text-sm text-zinc-900 focus:border-zinc-500 focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
+  "w-full rounded-md border border-zinc-300 bg-white p-2 text-sm text-zinc-900 focus:border-brand focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100";
 
 export function ConfigPanel({
   task,
@@ -160,7 +160,7 @@ export function ConfigPanel({
         type="button"
         onClick={onRun}
         disabled={isLoading}
-        className="rounded-md bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+        className="rounded-md bg-brand px-4 py-2 text-sm font-semibold tracking-wide text-white uppercase hover:bg-brand/90 disabled:cursor-not-allowed disabled:opacity-50"
       >
         {isLoading ? "Running…" : "Run comparison"}
       </button>
